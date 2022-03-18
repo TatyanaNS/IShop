@@ -30,7 +30,7 @@ public class UserService {
   }
 
   public User getUser(UUID id) {
-    return userRepository.getUserById(id);
+    return userRepository.getUser(id);
   }
 
   public List<User> findAll(int pageNumber, int rowPerPage) {

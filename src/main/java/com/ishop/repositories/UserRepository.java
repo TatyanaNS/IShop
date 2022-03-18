@@ -14,5 +14,5 @@ public interface UserRepository extends JpaRepository<User, UUID>, JpaSpecificat
 	User findUserByEmail(String email);
 
 	@Query("SELECT u FROM User u JOIN FETCH u.roles r WHERE u.id = :id")
-	User getUserById(@Param("id") UUID id);
+	User getUser(@Param("id") UUID id);
 }
