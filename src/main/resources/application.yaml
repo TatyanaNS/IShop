@@ -43,9 +43,6 @@ spring:
     url: ${URL}
     username: ${USER_NAME}
     password: ${DB_PASSWORD}
-#    url: jdbc:postgresql://shopdb.ckkjn6lyyd6e.us-east-1.rds.amazonaws.com:5432/shopdb
-#    username: postgres
-#    password: admin-123
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
@@ -54,7 +51,6 @@ spring:
     open-in-view: false
     hibernate:
       ddl-auto: validate
-#      enable_lazy_load_no_trans: true
   flyway:
     locations: classpath:db/migration/postgres
 myconfig:

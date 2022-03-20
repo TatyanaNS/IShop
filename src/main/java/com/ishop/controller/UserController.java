@@ -81,7 +81,6 @@ public class UserController {
       }
       return "user";
     } else {
-      System.out.println("User controller: " + user);
       userService.save(user);
       return "redirect:/users";
     }

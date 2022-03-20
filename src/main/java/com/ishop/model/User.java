@@ -3,6 +3,7 @@ package com.ishop.model;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Proxy;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
@@ -16,6 +17,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
+@Proxy(lazy = false)
 @Table(name = "users")
 public class User {
 

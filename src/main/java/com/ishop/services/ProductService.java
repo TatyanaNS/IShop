@@ -43,7 +43,6 @@ public class ProductService {
   }
 
   public void update(Product product) throws Exception {
-    Product productDb = productRepository.getById(product.getId());
     if (!StringUtils.isEmpty(product.getName())) {
       if (!existsById(product.getId())) {
         throw new Exception("Cannot find product with id: " + product.getId());
