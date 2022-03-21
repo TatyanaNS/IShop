@@ -13,7 +13,7 @@ Product
 Manufacturer
  - UUID id
  - String name
- - List<Product> products
+ - List\<Product\> products
 
 Role
  - UUID id
@@ -25,7 +25,7 @@ User
  - String password
  - String firstName
  - String lastName
- - List<Role> roles
+ - List\<Role\> roles
 
  Roles
  1. Admin is allowed all CRUD operations on all oblects
@@ -47,4 +47,4 @@ There are three profiles for running:
 - Customize application.yaml according to chosen DB configuration.
 Environment variables: URL, USER_NAME, DB_PASSWORD
 - Use http://localhost:8080/ to reach the application.
-- User with role admin - login: 'admin@gmail.com', password: 'admin'.
+- User with role admin - login: admin@gmail.com, password: admin.
