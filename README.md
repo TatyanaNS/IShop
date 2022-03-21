@@ -13,7 +13,7 @@ Product
 Producer
  - UUID id
  - String name
- - List<Product> products
+ - List\<Product\> products
 
 Role
  - UUID id
