@@ -25,7 +25,7 @@ User
  - String password
  - String firstName
  - String lastName
- - List<Role> roles
+ - List\<Role\> roles
 ### RUNNING PROFILES
 There are three profiles for running:
 | profile | description |
