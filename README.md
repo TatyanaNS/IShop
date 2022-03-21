@@ -1,4 +1,31 @@
 # IShop
+
+This web application consist of:
+1. Registration of new users
+2. User's autorization
+3. CRUD operations on objects
+
+Product
+ - UUID id
+ - String name
+ - BigDecimal price
+
+Producer
+ - UUID id
+ - String name
+ - List<Product> products
+
+Role
+ - UUID id
+ - String name
+
+User
+ - UUID id
+ - String email
+ - String password
+ - String firstName
+ - String lastName
+ - List<Role> roles
 ### RUNNING PROFILES
 There are three profiles for running:
 | profile | description |
