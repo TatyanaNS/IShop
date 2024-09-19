@@ -4,6 +4,14 @@ spring:
 
 server:
   port: 8080
+
+myconfig:
+  welcome:
+    message: Hello,
+    img: hello.img
+msg:
+  title: Spring Boot Title
+
 ---
 spring:
   config:
@@ -11,7 +19,7 @@ spring:
       on-profile: dev
   datasource:
     url: jdbc:h2:mem:ishop
-    username: admin
+    username: sa
     password:
     driverClassName: org.h2.Driver
   h2:
@@ -27,13 +35,7 @@ spring:
       enable_lazy_load_no_trans: true
   flyway:
     locations: classpath:db/migration/h2
-myconfig:
-  welcome:
-    message: Hello,
-    img: hello.img
 
-msg:
-  title: Spring Boot Title
 ---
 spring:
   config:
@@ -53,10 +55,35 @@ spring:
       ddl-auto: validate
   flyway:
     locations: classpath:db/migration/postgres
-myconfig:
-  welcome:
-    message: Hello,
-    img: hello.img
 
-msg:
-  title: Spring Boot Title
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    url: ${URL}
+    username: ${USER_NAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    connectionTimeout: 300000 #( example wait connection 5 mins  )
+    hikari:
+      minimumIdle: 2
+      maximumPoolSize: 10
+      idleTimeout: 120000
+      connectionTimeout: 300000
+      leakDetectionThreshold: 300000
+      data-source-properties:
+        autoReconnect: true
+        oracle:
+          jdbc:
+            timezoneAsRegion: false
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    show-sql: true
+    generate-ddl: false
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    locations: classpath:db/migration/oracle
