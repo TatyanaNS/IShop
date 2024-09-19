@@ -13,4 +13,4 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /target/ishop-1.0.1-SNAPSHOT.jar IShop.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "IShop-app.jar"]
+ENTRYPOINT ["java", "-jar", "IShop.jar"]
